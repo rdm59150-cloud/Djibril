@@ -1,8 +1,62 @@
-<article class="projet-portfolio" style="margin-top: 50px; padding-top: 30px; border-top: 1px solid #2c3e50;">
-    <h1>Déploiement d'un service avec Docker (Activité 1)</h1>
-    
-    <div class="projet-details">
-        <p><strong>Contexte :</strong> Découverte du fonctionnement de Docker, gestion des images/conteneurs, et déploiement d'une distribution légère Ubuntu avec un accès au service SSH[cite: 6].</p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet SISR - Docker Activité 1</title>
+    <style>
+        body {
+            background-color: #0F1624;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1A2235;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        h1, h2 {
+            color: #3b82f6;
+        }
+        .btn-retour {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-retour:hover {
+            text-decoration: underline;
+        }
+        .tech-badge {
+            background-color: #2c3e50;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Lien de retour vers l'accueil -->
+        <a href="index.html" class="btn-retour">⬅ Retour à l'accueil</a>
+        
+        <h1>Déploiement d'un service avec Docker (Activité 1)</h1>
+        
+        <p><strong>Contexte :</strong> Découverte du fonctionnement de Docker, gestion des images/conteneurs, et déploiement d'une distribution légère Ubuntu avec un accès au service SSH.</p>
         
         <p><strong>Technologies utilisées :</strong> 
             <span class="tech-badge">Docker Engine</span>
@@ -10,15 +64,15 @@
             <span class="tech-badge">Conteneurs</span>
             <span class="tech-badge">SSH</span>
         </p>
-    </div>
 
-    <div class="projet-taches">
-        <h2>Compétences mises en œuvre (Fin d'activité) :</h2>
+        <h2>Compétences mises en œuvre :</h2>
         <ul>
-            <li><strong>Création d'images personnalisées :</strong> Utilisation de la commande <code>commit</code> pour créer une nouvelle image Docker à partir d'un conteneur modifié en mode interactif[cite: 16].</li>
-            <li><strong>Sauvegarde locale :</strong> Exportation (<code>save</code>) et restauration (<code>load</code>) d'images Docker sous forme d'archives tar locales[cite: 17].</li>
-            <li><strong>Exposition de services :</strong> Lancement de conteneurs en mode détaché (arrière-plan) avec la technique du mappage de port pour rendre un service accessible[cite: 17, 18].</li>
-            <li><strong>Déploiement SSH :</strong> Redirection d'un port de la machine hôte vers le port 22 du conteneur pour autoriser les connexions distantes sécurisées[cite: 18].</li>
+            <li><strong>Création d'images :</strong> Utilisation de la commande <code>commit</code> pour créer une nouvelle image Docker personnalisée à partir d'un conteneur modifié en mode interactif.</li>
+            <li><strong>Sauvegarde locale :</strong> Exportation (<code>save</code>) et restauration (<code>load</code>) d'images Docker sous forme d'archives tar.</li>
+            <li><strong>Exposition de services :</strong> Lancement de conteneurs en mode détaché (arrière-plan) avec mappage de ports (ex: redirection du port hôte vers le port 22 du conteneur pour le SSH).</li>
+            <li><strong>Diagnostic de base :</strong> Utilisation des commandes <code>docker ps</code>, <code>docker top</code> et <code>docker logs</code> pour surveiller l'état et les processus des conteneurs.</li>
         </ul>
     </div>
-</article>
+
+</body>
+</html>
