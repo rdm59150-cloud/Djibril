@@ -3,38 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet GSB - Rafael Duarte-Martins</title>
-    <!-- Assure-toi de lier le même fichier CSS que ta page d'accueil pour garder le fond bleu foncé -->
-    <link rel="stylesheet" href="style.css"> 
+    <title>Projet SISR - GSB Visiteurs</title>
+    <style>
+        /* Design intégré pour être sûr que ça marche */
+        body {
+            background-color: #0F1624; /* Bleu très foncé comme ton accueil */
+            color: #ffffff; /* Texte en blanc */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #1A2235; /* Cadre légèrement plus clair */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        h1, h2 {
+            color: #3b82f6; /* Bleu clair pour les titres */
+        }
+        .btn-retour {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn-retour:hover {
+            text-decoration: underline;
+        }
+        .tech-badge {
+            background-color: #2c3e50;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-right: 5px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <!-- Bouton pour revenir à l'accueil -->
-            <a href="index.html">⬅ Retour à l'accueil</a>
-        </nav>
-    </header>
-
-<main style="padding: 50px; background-color: #0F1624; color: white; min-height: 100vh;">
+    <div class="container">
+        <!-- Lien pour revenir sur l'accueil -->
+        <a href="index.html" class="btn-retour">⬅ Retour à l'accueil</a>
+        
         <h1>Mission GSB : Infrastructure Visiteurs (DHCP & DNS)</h1>
         
-        <div class="projet-details">
-            <p><strong>Contexte :</strong> Déploiement d'un réseau local isolé et sécurisé pour le département des visiteurs médicaux du laboratoire GSB.</p>
-            <p><strong>Environnement & Technologies :</strong> Linux Debian 12 (CLI), VirtualBox, isc-dhcp-server, Bind9.</p>
-        </div>
+        <p><strong>Contexte :</strong> Déploiement d'un réseau local isolé et sécurisé pour le département des visiteurs médicaux du laboratoire GSB.</p>
+        
+        <p><strong>Technologies utilisées :</strong> 
+            <span class="tech-badge">Linux Debian 12 (CLI)</span>
+            <span class="tech-badge">VirtualBox</span>
+            <span class="tech-badge">isc-dhcp-server</span>
+            <span class="tech-badge">Bind9</span>
+        </p>
 
-        <div class="projet-taches">
-            <h2>Compétences mises en œuvre :</h2>
-            <ul>
-                <li>Création d'un environnement virtualisé en réseau interne.</li>
-                <li>Configuration d'un serveur Linux avec adressage IPv4 statique.</li>
-                <li>Mise en place d'un service DHCP restreint à une plage de 9 adresses (sécurisation des baux).</li>
-                <li>Déploiement d'un serveur DNS local (Bind9) avec configuration du dictionnaire de zone (SOA, NS, A).</li>
-                <li>Diagnostic réseau et tests d'intégration depuis un poste client.</li>
-            </ul>
-        </div>
-    </main>
+        <h2>Tâches réalisées :</h2>
+        <ul>
+            <li>Création d'un environnement virtualisé en réseau interne isolé.</li>
+            <li>Configuration d'un serveur Linux en ligne de commande avec adressage IPv4 statique.</li>
+            <li>Déploiement d'un service DHCP avec sécurisation des baux (restreint à une plage de 9 adresses IP).</li>
+            <li>Installation et configuration d'un serveur DNS local (Bind9) avec création du dictionnaire de zone directe (SOA, NS, A).</li>
+            <li>Diagnostic réseau et validation de l'architecture depuis un poste client (tests de ping et de résolution de noms).</li>
+        </ul>
+    </div>
 
 </body>
 </html>
